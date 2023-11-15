@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Sending Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+
+<div class="bg-white p-8 rounded shadow-md max-w-md w-full">
+    <h1 class="text-2xl font-bold mb-4">Send Notification</h1>
+
+    <!-- Admin selects the user -->
+    <div class="mb-4">
+        <label for="user" class="block text-sm font-medium text-gray-600">Select User</label>
+        <select id="user" name="user" class="mt-1 p-2 border rounded-md w-full">
+            <option value="user1">User 1</option>
+            <option value="user2">User 2</option>
+            <option value="ALL">All users</option>
+        </select>
+    </div>
+
+    <!-- Admin inputs the title of the notification -->
+    <div class="mb-4">
+        <label for="title" class="block text-sm font-medium text-gray-600">Notification Title</label>
+        <input type="text" id="title" name="title" class="mt-1 p-2 border rounded-md w-full" placeholder="Enter title">
+    </div>
+
+    <!-- Admin inputs the content of the notification -->
+    <div class="mb-6">
+        <label for="content" class="block text-sm font-medium text-gray-600">Notification Content</label>
+        <textarea id="content" name="content" rows="3" class="mt-1 p-2 border rounded-md w-full" placeholder="Enter content"></textarea>
+    </div>
+
+    <!-- Button to send the notification -->
+    <button onclick="sendNotification()" class="bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600">Send Notification</button>
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
